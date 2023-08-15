@@ -31,7 +31,10 @@ The technique follows[[1]](#1):
 
 ## Data visualization
 
-We can visually inspect the data set for the existance of a trend. The data visualization methods while not statistically relevant are still important for the users to understand the data.
+We can visually inspect the data set for the existance of a trend. The data visualization methods while not statistically relevant are still important for the users to understand the data. 
+
+
+![alt text](plot.jpg "Title")
 
 ## Mann-Kendall test [[2]](#2)
 
