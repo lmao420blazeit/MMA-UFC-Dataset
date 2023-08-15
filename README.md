@@ -6,7 +6,7 @@ This small project started as a pet project to understand the evolution of lower
 
 A way I found to answer this curiosity was to find a suitable dataset for the purpose. I was able to find a dataset from Kaggle which was parsed from the ufcstats website using beautifulsoup. The data include stats from different oponents, represented as R for red fighter and B for blue. R_ and B_ prefix signifies red and blue corner fighter stats respectively.
 
- #   Column           Non-Null Count  Dtype
+ c   Column           Non-Null Count  Dtype
 ---  ------           --------------  -----
  0   R_fighter        6012 non-null   object
  1   B_fighter        6012 non-null   object
