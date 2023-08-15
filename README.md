@@ -73,15 +73,15 @@ Mann_Kendall_Test(trend='increasing', h=True, p=0.0, z=15.044199273856817, Tau=0
 
 Where,
 
--trend: tells the trend (increasing, decreasing or no trend)
--h: True (if trend is present) or False (if the trend is absence)
--p: p-value of the significance test
--z: normalized test statistics
--Tau: Kendall Tau
--s: Mann-Kendal's score
--var_s: Variance S
--slope: Theil-Sen estimator/slope
--intercept: intercept of Kendall-Theil Robust Line, for seasonal test, full period cycle consider as unit time step
+  -trend: tells the trend (increasing, decreasing or no trend)
+  -h: True (if trend is present) or False (if the trend is absence)
+  -p: p-value of the significance test
+  -z: normalized test statistics
+  -Tau: Kendall Tau
+  -s: Mann-Kendal's score
+  -var_s: Variance S
+  -slope: Theil-Sen estimator/slope
+  -intercept: intercept of Kendall-Theil Robust Line, for seasonal test, full period cycle consider as unit time step
 
 
 # References
