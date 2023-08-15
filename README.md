@@ -29,7 +29,7 @@ The technique follows[[1]](#1):
 - Flex the foot around the shin area contracting the muscles around the shin area, providing extra protection to the bone
 
 
-# Mann-Kendall test
+# Mann-Kendall test [[2]]
 
 M-K test will be used to evaluate if there is a trend in a time series.
 > The Mann Kendall Trend Test (sometimes called the M-K test) is used to analyze data collected over time for consistently increasing or decreasing trends (monotonic) in Y values.
@@ -62,4 +62,9 @@ Simply gather the total leg attacks by fighter, group it by year and consider th
 <a id="1">[1]</a> 
 Sweet Science of Fighting. 
 https://sweetscienceoffighting.com/how-to-check-a-kick/
+
+<a id="2">[2]</a> 
+Mann-Kendall Analysis.
+https://www.statisticshowto.com/wp-content/uploads/2016/08/Mann-Kendall-Analysis-1.pdf
+https://www.statisticshowto.com/wp-content/uploads/2016/08/Mann-Kendall-Analysis-1.pdf
  
