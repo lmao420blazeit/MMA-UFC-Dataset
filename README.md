@@ -24,6 +24,12 @@ Leg checks are a defense mechanism to block and mitigate leg kicks. A good leg c
 
 ![alt text](checking.jpg "Title")
 
+The technique follows:
+- Lift the front leg vertically
+- Rotate the hip outwards at a 45 angle, allowing the force of the strike to be transferred to your hips rather than leg and thus keeping balance)
+- Flex the foot around the shin area contracting the muscles around the shin area, providing extra protection to the bone
+
+
 # Mann-Kendall test
 
 M-K test will be used to evaluate if there is a trend in a time series.
