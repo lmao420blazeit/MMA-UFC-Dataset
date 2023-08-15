@@ -24,7 +24,7 @@ Leg checks are a defense mechanism to block and mitigate leg kicks. A good leg c
 
 ![alt text](checking.jpg "Title")
 
-The technique follows:
+The technique follows[[1]]:
 - Lift the front leg vertically
 - Rotate the hip outwards at a 45 angle, allowing the force of the strike to be transferred to your hips rather than leg and thus keeping balance)
 - Flex the foot around the shin area contracting the muscles around the shin area, providing extra protection to the bone
@@ -58,4 +58,9 @@ Simply gather the total leg attacks by fighter, group it by year and consider th
   - This considers there is not effect of covariates (factors that would influence the total leg attacks such as fighter, weightclass and fighter type)
   - There is only one data point per time period (year). Considering we have multiple time periods, the median value is considered
 
+# References
+
+<a id="1">[1]</a> 
+Sweet Science of Fighting. 
+https://sweetscienceoffighting.com/how-to-check-a-kick/
  
