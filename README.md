@@ -1,5 +1,5 @@
 # MMA-UFC-Dataset
-MMA UFC Dataset from Kaggle 
+[MMA UFC Dataset from Kaggle]
 (https://www.kaggle.com/datasets/rajeevw/ufcdata/versions/2?resource=download)
 
 This small project started as a pet project to understand the evolution of lower body attacks in UFC. As a fan, I couldn't stop notice the rise of the calf kicks and leg checks. The question this project aims to answer is: Are calf kicks taking over modern UFC?
