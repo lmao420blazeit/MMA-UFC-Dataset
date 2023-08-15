@@ -29,7 +29,7 @@ The technique follows[[1]](#1):
 - Flex the foot around the shin area contracting the muscles around the shin area, providing extra protection to the bone
 
 
-# Mann-Kendall test [[2]]
+# Mann-Kendall test [[2]](#2)
 
 M-K test will be used to evaluate if there is a trend in a time series.
 > The Mann Kendall Trend Test (sometimes called the M-K test) is used to analyze data collected over time for consistently increasing or decreasing trends (monotonic) in Y values.
