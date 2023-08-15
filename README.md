@@ -1,7 +1,7 @@
 # MMA-UFC-Dataset
 [MMA UFC Dataset from Kaggle](https://www.kaggle.com/datasets/rajeevw/ufcdata/versions/2?resource=download)
 
-This small project started as a pet project to understand the evolution of lower body attacks in UFC. As a fan, I couldn't stop notice the rise of the calf kicks and leg checks. The question this project aims to answer is: Are calf kicks taking over modern UFC?
+This small project started as a pet project to understand the evolution of lower body attacks in UFC. As a fan, I couldn't stop notice the rise of the calf kicks and leg checks. The question this project aims to answer is: **Are calf kicks taking over modern UFC?**
 
 A way I found to answer this curiosity was to find a suitable dataset for the purpose. I was able to find a dataset from Kaggle which was parsed from the ufcstats website using beautifulsoup. The data include stats from different oponents, represented as R for red fighter and B for blue. R_ and B_ prefix signifies red and blue corner fighter stats respectively.
 
@@ -29,7 +29,11 @@ The technique follows[[1]](#1):
 - Flex the foot around the shin area contracting the muscles around the shin area, providing extra protection to the bone
 
 
-# Mann-Kendall test [[2]](#2)
+## Data visualization
+
+We can visually inspect the data set for the existance of a trend. The data visualization methods while not statistically relevant are still important for the users to understand the data.
+
+## Mann-Kendall test [[2]](#2)
 
 M-K test will be used to evaluate if there is a trend in a time series.
 > The Mann Kendall Trend Test (sometimes called the M-K test) is used to analyze data collected over time for consistently increasing or decreasing trends (monotonic) in Y values.
