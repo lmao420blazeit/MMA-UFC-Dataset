@@ -69,6 +69,7 @@ Simply gather the total leg attacks by fighter, group it by year and consider th
 
 ### Results
 
+p statistic < 0,05 so we can reject the null hypothesis and conclude that there is very likely the time series is increasing and monotonic.
 Mann_Kendall_Test(trend='increasing', h=True, p=0.0, z=15.044199273856817, Tau=0.1285784777143434, s=2323293.0, var_s=23848959669.0, slope=0.0003779289493575208, intercept=2.8641345427059712)
 
 Where,
@@ -82,6 +83,8 @@ Where,
   - var_s: Variance S
   - slope: Theil-Sen estimator/slope
   - intercept: intercept of Kendall-Theil Robust Line, for seasonal test, full period cycle consider as unit time step
+
+# Conclusion
 
 
 # References
