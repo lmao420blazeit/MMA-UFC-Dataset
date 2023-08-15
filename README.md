@@ -6,6 +6,16 @@ This small project started as a pet project to understand the evolution of lower
 
 A way I found to answer this curiosity was to find a suitable dataset for the purpose. I was able to find a dataset from Kaggle which was parsed from the ufcstats website using beautifulsoup. The data include stats from different oponents, represented as R for red fighter and B for blue. R_ and B_ prefix signifies red and blue corner fighter stats respectively.
 
+# Backstory of the effectiveness of leg kicks
+
+The shinbone is one of the largest bones in the body but its not as sturdy as other bones. Elite boxers can generate a huge amount of force with kicks, much more than any punch could ever deliver. A direct it to soft tissue or bone can be very damaging and painful. Most fighters have contioned themselves to desensitivize shins by hitting their shinbon on purpose with bottles, metal poles, or heavy bags. This makes the fibers of the bone grow denser and scar tissue to build around it. The nerves around the bones deaden and dull the pain.
+
+## Peroneal Nerve
+
+The target are for these kicks is the area below the knee where the peroneal nerve travels exposed to the skin surface. It is also here that this nerve splits into the superficial peroneal nerve and deep peroneal nerve. These nerves supply sensation to the outside of the shin and foot.
+
+
+
 # Mann-Kendall test
 
 M-K test will be used to evaluate if there is a trend in a time series.
