@@ -14,7 +14,7 @@ The shinbone is one of the largest bones in the body but its not as sturdy as ot
 
 The target are for these kicks is the area below the knee where the peroneal nerve travels exposed to the skin surface. It is also here that this nerve splits into the superficial peroneal nerve and deep peroneal nerve. These nerves supply sensation to the outside of the shin and foot.
 
-![alt text](Isolated.png "Title")
+![alt text](Anatomical-Course-of-the-Common-Fibular-Nerve-and-its-Terminal-Branches.jpg "Title")
 
 The superficial peroneal nerve powers the muscles responsible for ankle rotation and the deep peroneal nerve powers the muscle responsible for dorsiflexion and toes. Damaging these nerves not only causes excruciating pain but nullifies the fighers stance, as he isn't able to properly stand his balance.
 
