@@ -42,7 +42,10 @@ We can visually inspect the data set for the existance of a trend. The data visu
 M-K test will be used to evaluate if there is a trend in a time series.
 > The Mann Kendall Trend Test (sometimes called the M-K test) is used to analyze data collected over time for consistently increasing or decreasing trends (monotonic) in Y values.
 
-How it works:
+### How it works:
+
+$H_0$: No monotonic trend
+$H_\alpha$: Monotonic trend is present
 
 - The null hypothesis, for this test is that there is no monotonic trend
 - The alternate hypothesis is that there is a trend, this trend can be positive, negative or non-null.
@@ -57,13 +60,17 @@ Because this is a non parametric test we do not require to make prior distributi
   
   An inate source of bias is the natural selection of some fighters, which due to multiple reasons can have more fights per year than others.
 
- ## Approaches to statistically test this hypothesis:
+ ### Approaches to statistically test this hypothesis:
 
  - Test the evolution of the total leg attacks using Mann-Kendall test
 Simply gather the total leg attacks by fighter, group it by year and consider the median value.
   - This considers sazonality is non existent
   - This considers there is not effect of covariates (factors that would influence the total leg attacks such as fighter, weightclass and fighter type)
   - There is only one data point per time period (year). Considering we have multiple time periods, the median value is considered
+
+### Results
+
+Mann_Kendall_Test(trend='increasing', h=True, p=0.0, z=15.044199273856817, Tau=0.1285784777143434, s=2323293.0, var_s=23848959669.0, slope=0.0003779289493575208, intercept=2.8641345427059712)
 
 # References
 
