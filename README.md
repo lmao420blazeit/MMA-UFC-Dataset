@@ -22,6 +22,7 @@ The superficial peroneal nerve powers the muscles responsible for ankle rotation
 
 Leg checks are a defense mechanism to block and mitigate leg kicks. A good leg check is done with the upper part of the shin bone or knew, by oposing the strongest bone against the kickers weakest part such as the bottom tibia. The leg checks can be used for high kicks that target the femur or low kicks.
 
+![alt text](checking.jpg "Title")
 
 # Mann-Kendall test
 
