@@ -72,6 +72,7 @@ Simply gather the total leg attacks by fighter, group it by year and consider th
 Mann_Kendall_Test(trend='increasing', h=True, p=0.0, z=15.044199273856817, Tau=0.1285784777143434, s=2323293.0, var_s=23848959669.0, slope=0.0003779289493575208, intercept=2.8641345427059712)
 
 Where,
+
 -trend: tells the trend (increasing, decreasing or no trend)
 -h: True (if trend is present) or False (if the trend is absence)
 -p: p-value of the significance test
