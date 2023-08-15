@@ -44,11 +44,8 @@ M-K test will be used to evaluate if there is a trend in a time series.
 
 ### How it works:
 
-$H_0$: No monotonic trend
-$H_\alpha$: Monotonic trend is present
-
-- The null hypothesis, for this test is that there is no monotonic trend
-- The alternate hypothesis is that there is a trend, this trend can be positive, negative or non-null.
+- $H_0$: No monotonic trend
+- $H_\alpha$: Monotonic trend is present, positive or negative depending on the test direction.
 
 Assumptions:
 
