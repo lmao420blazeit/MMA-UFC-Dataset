@@ -89,6 +89,10 @@ Where,
 
 As we can see from the graph and the Mann Kendall Test, leg kicks are indeed becoming popular among fighers in UFC. This can be explained by the anatomical reasons listed above.
 
+## Limitations
+
+The way UFC classifies leg hits is not our definition of leg kicks. UFC classifies every attack below the waste as a leg hit whereas we consider leg to leg contact from the femur below although it would ideally be interesting to see the tibialis nerve region hit and shin to shin. Nonetheless, since this data is impossible to collect we considered leg hits (broadly speaking).
+
 # References
 
 <a id="1">[1]</a> 
