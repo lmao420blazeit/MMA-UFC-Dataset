@@ -1,4 +1,4 @@
-# MMA-UFC-Dataset
+# Are calf kicks taking over modern UFC?
 MMA UFC Dataset from [Kaggle](https://www.kaggle.com/datasets/rajeevw/ufcdata/versions/2?resource=download)
 
 This small project started as a pet project to understand the evolution of lower body attacks in UFC. As a fan, I couldn't stop notice the rise of the calf kicks and leg checks. The question this project aims to answer is: **Are calf kicks taking over modern UFC?**
@@ -70,6 +70,7 @@ Simply gather the total leg attacks by fighter, group it by year and consider th
 ### Results
 
 p statistic < 0,05 so we can reject the null hypothesis and conclude that there is very likely the time series is increasing and monotonic.
+
 Mann_Kendall_Test(trend='increasing', h=True, p=0.0, z=15.044199273856817, Tau=0.1285784777143434, s=2323293.0, var_s=23848959669.0, slope=0.0003779289493575208, intercept=2.8641345427059712)
 
 Where,
@@ -86,6 +87,7 @@ Where,
 
 # Conclusion
 
+As we can see from the graph and the Mann Kendall Test, leg kicks are indeed becoming popular among fighers in UFC. This can be explained by the anatomical reasons listed above.
 
 # References
 
