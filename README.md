@@ -13,7 +13,7 @@ The shinbone is one of the largest bones in the body but its not as sturdy as ot
 
 The target are for these kicks is the area below the knee where the peroneal nerve travels exposed to the skin surface. It is also here that this nerve splits into the superficial peroneal nerve and deep peroneal nerve. These nerves supply sensation to the outside of the shin and foot.
 
-![alt text](Anatomical-Course-of-the-Common-Fibular-Nerve-and-its-Terminal-Branches.jpg "Title")
+![alt text](pics/Anatomical-Course-of-the-Common-Fibular-Nerve-and-its-Terminal-Branches.jpg "Title")
 
 The superficial peroneal nerve powers the muscles responsible for ankle rotation and the deep peroneal nerve powers the muscle responsible for dorsiflexion and toes. Damaging these nerves not only causes excruciating pain but nullifies the fighers stance, as he isn't able to properly stand his balance.
 
@@ -21,7 +21,7 @@ The superficial peroneal nerve powers the muscles responsible for ankle rotation
 
 Leg checks are a defense mechanism to block and mitigate leg kicks. A good leg check is done with the upper part of the shin bone or knew, by oposing the strongest bone against the kickers weakest part such as the bottom tibia. The leg checks can be used for high kicks that target the femur or low kicks.
 
-![alt text](checking.jpg "Title")
+![alt text](pics/checking.jpg "Title")
 
 The technique follows[[1]](#1):
 - Lift the front leg vertically
@@ -34,7 +34,7 @@ The technique follows[[1]](#1):
 We can visually inspect the data set for the existance of a trend. The data visualization methods while not statistically relevant are still important for the users to understand the data. 
 
 
-![alt text](plot.png "Title")
+![alt text](pics/plot.png "Title")
 
 
 ## Mann-Kendall test [[2]](#2)
