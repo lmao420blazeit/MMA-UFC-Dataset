@@ -1,4 +1,6 @@
 import pandas as pd
+from sklearn import preprocessing
+
 
 data = pd.read_csv("raw_total_fight_data.csv", sep=';')
 
@@ -11,49 +13,70 @@ data2 = data.copy()
 data.loc[data['Winner'] == data['R_fighter'] , "winner_label"] = "0"
 data.loc[data['Winner'] == data['B_fighter'] , "winner_label"] = "1"
 
-data["R_SIG_STR."] = data["R_SIG_STR."].str.split(" of ").str[0]
-data["R_SIG_STR."] = data["R_SIG_STR."].astype("int32")
-data["R_SIG_STR."] = data["R_SIG_STR."].div(data["last_round"])
+classifier_list = ["R_SIG_STR.", "B_SIG_STR.", "R_TD", "B_TD"]
 
+"""Analyze significant strikes and takedowns normalized by number of rounds
 
-data["B_SIG_STR."] = data["B_SIG_STR."].str.split(" of ").str[0]
-data["B_SIG_STR."] = data["B_SIG_STR."].astype("int32")
-data["B_SIG_STR."] = data["B_SIG_STR."].div(data["last_round"])
+Returns:
+    list: SIGNIFICANT STRIKES/LAST ROUND
+"""
+for _classifier in classifier_list:
 
-data["R_TD"] = data["R_TD"].str.split(" of ").str[0]
-data["R_TD"] = data["R_TD"].astype("int32")
-data["R_TD"] = data["R_TD"].div(data["last_round"])
+    data[_classifier] = data[_classifier].str.split(" of ").str[0]
+    data[_classifier] = data[_classifier].astype("int32")
+    data[_classifier] = data[_classifier].div(data["last_round"])
+    
+classifier_list = ["R_TOTAL_STR.", "B_TOTAL_STR."]
 
-data["B_TD"] = data["B_TD"].str.split(" of ").str[0]
-data["B_TD"] = data["B_TD"].astype("int32")
-data["B_TD"] = data["B_TD"].div(data["last_round"])
+"""Compute percentage strikes hit
 
-data["R_TOTAL_STR."] = data["R_TOTAL_STR."].str.split(" of ").str[0]
-data["R_TOTAL_STR.TEMP"] = data2["R_TOTAL_STR."].str.split(" of ").str[-1]
-data["R_TOTAL_STR."] = data["R_TOTAL_STR."].astype("int32")
-data["R_TOTAL_STR.TEMP"] = data["R_TOTAL_STR.TEMP"].astype("int32")
-data["R_TOTAL_STR."] = data["R_TOTAL_STR."].div(data["R_TOTAL_STR.TEMP"])
+Returns:
+    _type_: TOTAL STRIKES HITS/TOTAL STRIKES
+"""
 
-data["B_TOTAL_STR."] = data["B_TOTAL_STR."].str.split(" of ").str[0]
-data["B_TOTAL_STR.TEMP"] = data2["B_TOTAL_STR."].str.split(" of ").str[-1]
-data["B_TOTAL_STR."] = data["B_TOTAL_STR."].astype("int32")
-data["B_TOTAL_STR.TEMP"] = data["B_TOTAL_STR.TEMP"].astype("int32")
-data["B_TOTAL_STR."] = data["B_TOTAL_STR."].div(data["B_TOTAL_STR.TEMP"])
+for _classifier in classifier_list:
+    data[_classifier] = data[_classifier].str.split(" of ").str[0]
+    data["R_TOTAL_STR.TEMP"] = data2[_classifier].str.split(" of ").str[-1]
+    data[_classifier] = data[_classifier].astype("int32")
+    data["R_TOTAL_STR.TEMP"] = data["R_TOTAL_STR.TEMP"].astype("int32")
+    data[_classifier] = data[_classifier].div(data["R_TOTAL_STR.TEMP"])
 
-data.drop(["R_TOTAL_STR.TEMP", "B_TOTAL_STR.TEMP", "Winner", "last_round", "B_fighter", "R_fighter"], axis=1, inplace=True)
+data.drop(["R_TOTAL_STR.TEMP", "last_round", "B_fighter", "R_fighter"], axis=1, inplace=True)
 import re
 
-#data["Fight_type"] = data["Fight_type"].apply(re.match("[a-zA-Z]*weight[a-zA-Z]*"))
-data["Fight_type"] = [re.match(r'[a-zA-Z]*weight[a-zA-Z]*', str(x)) for x in data["Fight_type"]]
+# Create a feature based on the weight class derived from the fight type
+# Label encode the feature space
+def regex_match(x): 
+    i = re.search(r'[a-zA-Z]*weight[a-zA-Z]*', str(x))
+    if i is None:
+        return(x)
+    return (i.group(0))
 
-from sklearn import preprocessing
-print(len(data["Fight_type"].unique()))
+data["Fight_type"] = [regex_match(x) for x in data["Fight_type"]]
 data["Fight_type"] = preprocessing.LabelEncoder().fit_transform(data["Fight_type"].tolist())
 
+data["R_SIG_STR."] = preprocessing.MinMaxScaler().fit(data["R_SIG_STR."].values.reshape(-1, 1)).transform(data["R_SIG_STR."].values.reshape(-1, 1))
+data["B_SIG_STR."] = preprocessing.MinMaxScaler().fit(data["B_SIG_STR."].values.reshape(-1, 1)).transform(data["B_SIG_STR."].values.reshape(-1, 1))
+
+from sklearn.model_selection import train_test_split
+
+data = data.dropna()
+data = data.reset_index()
+
 print(data.head())
+print(data.corr())
 
-"""
-PREDICTORS
+X_train,X_test,y_train,y_test = train_test_split(data.drop(['winner_label'], axis=1), data["winner_label"], test_size = 0.25, random_state = 42)
 
 
-"""
+from sklearn.linear_model import Perceptron
+
+pcpt = Perceptron(random_state=42,
+               max_iter=100,
+               tol=0.001)
+
+pcpt.fit(X_train, y_train)
+
+from sklearn.metrics import classification_report
+
+print(classification_report(pcpt.predict(X_test), y_test))
