@@ -21,7 +21,6 @@ Returns:
     list: SIGNIFICANT STRIKES/LAST ROUND
 """
 for _classifier in classifier_list:
-
     data[_classifier] = data[_classifier].str.split(" of ").str[0]
     data[_classifier] = data[_classifier].astype("int32")
     data[_classifier] = data[_classifier].div(data["last_round"])
@@ -63,20 +62,4 @@ from sklearn.model_selection import train_test_split
 data = data.dropna()
 data = data.reset_index()
 
-print(data.head())
-print(data.corr())
-
-X_train,X_test,y_train,y_test = train_test_split(data.drop(['winner_label'], axis=1), data["winner_label"], test_size = 0.25, random_state = 42)
-
-
-from sklearn.linear_model import Perceptron
-
-pcpt = Perceptron(random_state=42,
-               max_iter=100,
-               tol=0.001)
-
-pcpt.fit(X_train, y_train)
-
-from sklearn.metrics import classification_report
-
-print(classification_report(pcpt.predict(X_test), y_test))
+X_train, X_test, y_train, y_test = train_test_split(data.drop(['winner_label', "Winner"], axis=1), data["winner_label"], test_size = 0.25, random_state = 42)
